@@ -30,14 +30,14 @@
 			<form id="addForm" action="${basePath}teacher?method=add" method="post">
 				<table class="tableadd" style="width: 50%;">
 					<tr>
-						<td>姓名</td>
-						<td><input type="text" name="tName"></td>
-					</tr>
-					<tr>
-						<td>账号</td>
+						<td>关键词</td>
 						<td style="color: red;"><input type="text" name="userName"></td>
 					</tr>
 					<tr>
+						<td>详细描述</td>
+						<td><input type="text" name="tName"></td>
+					</tr>
+					<tr style="display: none">
 						<td>密码</td>
 						<td>
 							<input type="password" name="pwd" value="123456">

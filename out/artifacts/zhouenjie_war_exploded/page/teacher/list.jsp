@@ -22,9 +22,9 @@
 	<body>
 		<form action="${basePath}teacher?method=list" method="post">
 			<div class="condition">
-				ID：<input type="text" name="tId" value="${teacher.tId}">
-				姓名：<input type="text" name="tName" value="${teacher.tName}">
-				账号：<input type="text" name="userName" value="${teacher.userName}">
+				词条ID：<input type="text" name="tId" value="${teacher.tId}">
+				关键字：<input type="text" name="userName" value="${teacher.userName}">
+				详细描述：<input type="text" name="tName" value="${teacher.tName}">
 				<button>
 					<i class="fa fa-search"></i>
 					查询
@@ -43,17 +43,17 @@
 		<table class="tablelist">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>姓名</th>
-					<th>账号</th>
+					<th>词条ID</th>
+					<th>关键字</th>
+					<th>详细描述</th>
 					<th width="120px">操作</th>
 				</tr>
 			</thead>
 			<c:forEach items="${pageInfo.list}" var="teacher">
 			<tr>
 				<td>${teacher.tId}</td>
-				<td>${teacher.tName}</td>
 				<td>${teacher.userName}</td>
+				<td>${teacher.tName}</td>
 				<td>
 					<button class="edit" type="button" onclick="window.location.href='${basePath}teacher?method=edit&id=${teacher.tId}'">
 						<i class="fa fa-edit"></i>

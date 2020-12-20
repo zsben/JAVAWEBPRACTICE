@@ -31,12 +31,12 @@
 				<input type="hidden" name="tId" value="${teacher.tId}">
 				<table class="tableadd" style="width: 50%;">
 					<tr>
-						<td>姓名</td>
-						<td><input type="text" name="tName" value="${teacher.tName}"></td>
+						<td>关键词</td>
+						<td style="color: red;"><input type="text" name="userName" value="${teacher.userName}"></td>
 					</tr>
 					<tr>
-						<td>账号</td>
-						<td style="color: red;"><input type="text" name="userName" value="${teacher.userName}"></td>
+						<td>详细描述</td>
+						<td><input type="text" name="tName" value="${teacher.tName}"></td>
 					</tr>
 					<tr>
 						<td colspan="4" align="left">
