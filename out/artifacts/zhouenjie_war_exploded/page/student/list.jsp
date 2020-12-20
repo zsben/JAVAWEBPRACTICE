@@ -22,9 +22,9 @@
 	<body>
 		<form action="${basePath}student?method=list" method="post">
 			<div class="condition">
-				ID：<input type="text" name="stuId" value="${student.stuId}">
-				姓名：<input type="text" name="stuName" value="${student.stuName}">
-				学号：<input type="text" name="stuNo" value="${student.stuNo}">
+				词条ID：<input type="text" name="stuId" value="${student.stuId}">
+				关键词：<input type="text" name="stuNo" value="${student.stuNo}">
+				详细描述：<input type="text" name="stuName" value="${student.stuName}">
 				<button>
 					<i class="fa fa-search"></i>
 					查询
@@ -43,17 +43,17 @@
 		<table class="tablelist">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>姓名</th>
-					<th>学号</th>
+					<th>词条ID</th>
+					<th>关键词</th>
+					<th>详细描述</th>
 					<th width="120px">操作</th>
 				</tr>
 			</thead>
 			<c:forEach items="${pageInfo.list}" var="student">
 			<tr>
 				<td>${student.stuId}</td>
-				<td>${student.stuName}</td>
 				<td>${student.stuNo}</td>
+				<td>${student.stuName}</td>
 				<td>
 					<button class="edit" type="button" onclick="window.location.href='${basePath}student?method=edit&id=${student.stuId}'">
 						<i class="fa fa-edit"></i>

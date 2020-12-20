@@ -39,11 +39,11 @@
 				<input type="hidden" name="stuId" value="${student.stuId}">
 				<table class="tableadd" style="width: 50%;">
 					<tr>
-						<td>学号</td>
+						<td>关键词</td>
 						<td><input type="text" name="stuNo" value="${student.stuNo}"></td>
 					</tr>
 					<tr>
-						<td>姓名</td>
+						<td>详细描述</td>
 						<td style="color: red;"><input type="text" name="stuName" value="${student.stuName}"></td>
 					</tr>
 					<tr>

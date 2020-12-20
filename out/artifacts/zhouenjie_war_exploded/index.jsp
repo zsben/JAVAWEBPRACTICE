@@ -34,7 +34,7 @@
 	</head>
 	<body>
 		<div class="header">
-			<div class="logo">学生选课系统</div>
+			<div class="logo">个人简介与家乡介绍管理系统</div>
 			<div class="user">
 				<i class="fa fa-caret-down point"></i>
 				<i class="fa fa-user"></i>
@@ -64,27 +64,28 @@
 				<p>
 					<i class="fa fa-info-circle"></i>
 					<i class="fa fa-angle-right point"></i>
-					管理员权限
+					功能分类
 				</p>
 				<ul>
 					<li>
 						<a  href="javascript:void(0);" url="${basePath}student?method=list"  title="学生管理">
 							<i class="fa fa-caret-right"></i>
-							学生管理
+							个人简历管理
 						</a>
 					</li>
 					<li>
 						<a  href="javascript:void(0);" url="${basePath}teacher?method=list"  title="老师管理">
 							<i class="fa fa-caret-right"></i>
-							老师管理
+							家乡介绍管理
 						</a>
 					</li>
 					<li>
 						<a  href="javascript:void(0);" url="${basePath}course?method=list"  title="课程管理">
 							<i class="fa fa-caret-right"></i>
-							课程管理
+							游客评论管理
 						</a>
 					</li>
+					<!--
 					<li>
 						<a  href="javascript:void(0);" url="${basePath}scquery?method=query_range"  title="分数区间统计">
 							<i class="fa fa-caret-right"></i>
@@ -97,6 +98,7 @@
 							及格率
 						</a>
 					</li>
+					-->
 					
 				</ul>
 				</c:if>
@@ -147,9 +149,9 @@
 		<div class="main">
 			<div class="location">
 				<i class="fa fa-home"></i>
-				<span class="menu_title">用户管理</span>
+				<span class="menu_title">个人简历词条管理</span>
 			</div>
-			<iframe src="main"  width="100%" height="90%" name="mainFrame"  id="mainFrame" frameborder="0px"></iframe>
+			<iframe src="http://localhost:56231/zhouenjie/student?method=list"  width="100%" height="90%" name="mainFrame"  id="mainFrame" frameborder="0px"></iframe>
 		</div>
 	</body>
 </html>
