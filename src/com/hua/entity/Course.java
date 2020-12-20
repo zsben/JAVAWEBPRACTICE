@@ -9,7 +9,6 @@ public class Course {
 
 	private Integer cId;
 	private String cName;
-	//老师所教这门课程
 	private Teacher teacher;
 
 	public Integer getcId() {

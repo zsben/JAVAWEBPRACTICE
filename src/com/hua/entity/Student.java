@@ -8,7 +8,6 @@ public class Student {
 	private String stuPwd;
 	
 
-	//查询辅助属性：学生成绩属性
 	private Integer score;
 	
 	public Integer getStuId() {

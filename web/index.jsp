@@ -80,7 +80,7 @@
 						</a>
 					</li>
 					<li>
-						<a  href="javascript:void(0);" url="${basePath}course?method=list"  title="课程管理">
+						<a  href="javascript:void(0);" url="${basePath}course?method=list"  title="游客评论管理">
 							<i class="fa fa-caret-right"></i>
 							游客评论管理
 						</a>

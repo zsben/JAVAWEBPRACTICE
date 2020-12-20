@@ -23,14 +23,14 @@
 		<form action="${basePath}course?method=list" method="post">
 			<div class="condition">
 				ID：<input type="text" name="cId" value="${course.cId}">
-				课程名：<input type="text" name="cName" value="${course.cName}">
-				老师：<input type="text" name="tName" value="${course.teacher.tName}">
-				老师账号：<input type="text" name="userName" value="${course.teacher.userName}">
+				留言：<input type="text" name="cName" value="${course.cName}">
+				游客姓名：<input type="text" name="tName" value="${course.teacher.tName}">
+				<input type="text" style="display: none" name="userName" value="${course.teacher.userName}">
 				<button>
 					<i class="fa fa-search"></i>
 					查询
 				</button>
-				<button type="button"  onclick="window.location.href='course?method=v_add'">
+				<button style="display: none" type="button"  onclick="window.location.href='course?method=v_add'">
 					<i class="fa fa-plus"></i>
 					新增
 				</button>
@@ -46,8 +46,8 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>课程名</th>
-					<th>老师</th>
+					<th>留言</th>
+					<th>游客姓名</th>
 					<th width="120px">操作</th>
 				</tr>
 			</thead>
@@ -57,7 +57,7 @@
 				<td>${course.cName}</td>
 				<td>${course.teacher.tName}</td>
 				<td>
-					<button class="edit" type="button" onclick="window.location.href='${basePath}course?method=edit&id=${course.cId}'">
+					<button style="display: none" class="edit" type="button" onclick="window.location.href='${basePath}course?method=edit&id=${course.cId}'">
 						<i class="fa fa-edit"></i>
 						修改
 					</button>

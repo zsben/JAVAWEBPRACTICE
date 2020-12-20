@@ -11,7 +11,7 @@ import com.hua.entity.Admin;
 import com.hua.utils.PropertiesUtils;
 
 /**
- * 会使用DBUtils工具类
+ * DBUtils工具类
  * 
  * @author Administrator
  *

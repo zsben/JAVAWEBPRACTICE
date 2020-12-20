@@ -20,7 +20,7 @@ import com.hua.utils.PageInfo;
 import com.hua.utils.PathUtils;
 
 @WebServlet("/teacher")
-public class TeacherServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
 
 
     @Override
@@ -31,7 +31,7 @@ public class TeacherServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String method = request.getParameter("method");
-        if ("list".equals(method)) { // 老师列表页面
+        if ("list".equals(method)) { // 列表页面
             this.list(request, response);
         } else if ("add".equals(method)) {
             this.add(request, response);

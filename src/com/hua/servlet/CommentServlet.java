@@ -23,7 +23,7 @@ import com.hua.utils.PageInfo;
 import com.hua.utils.PathUtils;
 
 @WebServlet("/sc")
-public class SCServlet extends HttpServlet {
+public class CommentServlet extends HttpServlet {
 
 
     @Override

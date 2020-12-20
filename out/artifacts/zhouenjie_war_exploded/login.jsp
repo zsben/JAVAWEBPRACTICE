@@ -99,7 +99,7 @@
 	<body>
 		<div class="login">
 			<div class="title">
-				学生选课系统
+				个人简历与家乡介绍系统
 			</div>
 			<form action="login" method="post">
 				<div class="u">
@@ -111,8 +111,8 @@
 				<div class="s">
 					<select name="type">
 						<option value="">请选择登陆类型</option>
-						<option value="0">学生</option>
-						<option value="1">老师</option>
+						<option value="0">游客</option>
+						<option style="display: none" value="1">老师</option>
 						<option value="2">管理员</option>
 					</select>
 				</div>

@@ -36,13 +36,13 @@ public class StudentServlet extends HttpServlet {
 		String method = request.getParameter("method");
 		if("list".equals(method)) {
 			this.list(request, response);
-		}else if("add".equals(method)) { // 新增学生,跳转到列表页面
+		}else if("add".equals(method)) { // 新增词条,跳转到列表页面
 			this.add(request, response);
-		}else if("edit".equals(method)) { // 跳转到修改学生信息
+		}else if("edit".equals(method)) { // 跳转到修改词条信息
 			this.findById(request, response);
-		}else if("editsubmit".equals(method)) { // 提交学生信息，返回学生列表页面
+		}else if("editsubmit".equals(method)) { // 提交词条信息，返回词条列表页面
 			this.editsubmit(request, response);
-		}else if("delete".equals(method)) { // 管理员删除学生，跳转到列表页面
+		}else if("delete".equals(method)) { // 管理员删除词条，跳转到列表页面
 			this.delete(request, response);
 		}else if("detail".equals(method)) { //
 			this.detail(request, response);
