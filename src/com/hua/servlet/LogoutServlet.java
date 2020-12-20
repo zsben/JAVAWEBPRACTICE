@@ -21,6 +21,9 @@ import com.hua.entity.Student;
 import com.hua.entity.Teacher;
 import com.hua.utils.MD5;
 
+/**
+ * 登出请求
+ */
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
 

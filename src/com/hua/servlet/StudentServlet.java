@@ -36,15 +36,15 @@ public class StudentServlet extends HttpServlet {
 		String method = request.getParameter("method");
 		if("list".equals(method)) {
 			this.list(request, response);
-		}else if("add".equals(method)) {
+		}else if("add".equals(method)) { // 新增学生,跳转到列表页面
 			this.add(request, response);
-		}else if("edit".equals(method)) {
+		}else if("edit".equals(method)) { // 跳转到修改学生信息
 			this.findById(request, response);
-		}else if("editsubmit".equals(method)) {
+		}else if("editsubmit".equals(method)) { // 提交学生信息，返回学生列表页面
 			this.editsubmit(request, response);
-		}else if("delete".equals(method)) {
+		}else if("delete".equals(method)) { // 管理员删除学生，跳转到列表页面
 			this.delete(request, response);
-		}else if("detail".equals(method)) {
+		}else if("detail".equals(method)) { //
 			this.detail(request, response);
 		}
 		
@@ -100,13 +100,13 @@ public class StudentServlet extends HttpServlet {
 				sc.setcName(c.getcName());
 			}
 			request.setAttribute("list", list);
-			request.getRequestDispatcher("page/student/detail.jsp").forward(request, response);
+			request.getRequestDispatcher("page/student/jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 	}
-	
-	
+
+
 	private void add(HttpServletRequest request, HttpServletResponse response) {
 		String stuNo = request.getParameter("stuNo");
 		String stuName = request.getParameter("stuName");

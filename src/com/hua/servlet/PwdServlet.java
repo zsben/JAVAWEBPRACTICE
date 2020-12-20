@@ -21,6 +21,9 @@ import com.hua.entity.Student;
 import com.hua.entity.Teacher;
 import com.hua.utils.MD5;
 
+/**
+ * 修改密码请求 pwd.jsp
+ */
 @WebServlet("/pwd")
 public class PwdServlet extends HttpServlet {
 

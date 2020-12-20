@@ -32,17 +32,17 @@ public class CourseServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		if("list".equals(method)) {
+		if("list".equals(method)) { // 课程列表
 			this.list(request, response);
-		}else if("add".equals(method)) {
+		}else if("add".equals(method)) { // 新增课程后跳转到列表页面
 			this.add(request, response);
-		}else if("v_add".equals(method)) {
+		}else if("v_add".equals(method)) { // 管理员课程管理新增课程按钮
 			this.v_add(request, response);
-		}else if("edit".equals(method)) {
+		}else if("edit".equals(method)) { // 跳转到修改课程界面
 			this.findById(request, response);
-		}else if("editsubmit".equals(method)) {
+		}else if("editsubmit".equals(method)) { // 修改界面后跳转到列表
 			this.editsubmit(request, response);
-		}else if("delete".equals(method)) {
+		}else if("delete".equals(method)) { // 删除课程后跳转到列表
 			this.delete(request, response);
 		}
 		

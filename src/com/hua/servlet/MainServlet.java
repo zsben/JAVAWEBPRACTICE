@@ -23,6 +23,9 @@ import com.hua.utils.MD5;
 import com.hua.utils.PageInfo;
 import com.hua.utils.PathUtils;
 
+/**
+ * 综合统计
+ */
 @WebServlet("/main")
 public class MainServlet extends HttpServlet {
 
