@@ -20,21 +20,20 @@ import java.util.List;
 public class LoadFileServlet extends HttpServlet {
     private static final String UPLOAD_DIRECTORY = "upload";
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
-    }
+//    @Override
+//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doGet(req, resp);
+//    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         req.setCharacterEncoding("utf-8");
         DiskFileItemFactory factory = new DiskFileItemFactory();
         factory.setSizeThreshold(1024 * 512);
         factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
 
         ServletFileUpload upload = new ServletFileUpload(factory);
-        upload.setFileSizeMax(10*1024*1024);
+        upload.setFileSizeMax(10 * 1024 * 1024);
         upload.setHeaderEncoding("utf-8");
 
         String uploadPath = req.getServletContext().getRealPath("./")
@@ -42,28 +41,26 @@ public class LoadFileServlet extends HttpServlet {
                 + UPLOAD_DIRECTORY;
 
         File uploadDir = new File(uploadPath);
-        if(!uploadDir.exists()){
+        if (!uploadDir.exists()) {
             uploadDir.mkdir();
         }
 
-        try{
+        try {
             List<FileItem> fileItems = upload.parseRequest(req);
             if (fileItems != null && fileItems.size() > 0) {
-                for(FileItem item: fileItems){
-                    if (!item.isFormField()){
+                for (FileItem item : fileItems) {
+                    if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
                         System.out.println(fileName);
                     }
                 }
             }
 
-            req.setAttribute("message","文件导入成功！");
-        }catch (Exception exception){
-            req.setAttribute("message", exception.getMessage());
+            req.setAttribute("message", "批量导入成功");
+        } catch (Exception exception) {
         }
 
-        req.getServletContext().getRequestDispatcher("message.jsp").forward(
-                req, resp);
+        req.getRequestDispatcher("message.jsp").forward(req, resp);
 
         InputStream inputStream = null;
 

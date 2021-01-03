@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebFilter(urlPatterns= {"/*"},initParams= {
-		@WebInitParam(name="exclude",value="/login.jsp,/login,/noprivilige.jsp,.css,.png,.jpg,.js")
+		@WebInitParam(name="exclude",value="/login.jsp,/login,/noprivilige.jsp,.css,.png,.jpg,.js,/message.jsp")
 })
 public class PermissionFilter implements Filter {
 
