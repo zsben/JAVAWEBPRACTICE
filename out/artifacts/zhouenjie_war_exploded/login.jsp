@@ -99,7 +99,7 @@
 	<body>
 		<div class="login">
 			<div class="title">
-				学生选课系统
+				研究生成绩管理系统
 			</div>
 			<form action="login" method="post">
 				<div class="u">

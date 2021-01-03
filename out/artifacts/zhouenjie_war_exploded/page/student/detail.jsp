@@ -54,7 +54,17 @@
 			<c:forEach items="${list}" var="sc">
 			<tr>
 				<td>${sc.cName}</td>
-				<td>${sc.score}</td>
+				<td>${sc.score}</td>P
+				<td>
+					<c:choose>
+						<c:when test="${sc.score < 60}">
+							<span style="color: #ff0000">该门课程不及格，请及时进行补考或重修</span>
+						</c:when>
+						<c:otherwise>
+							已通过该课程
+						</c:otherwise>
+					</c:choose>
+				</td>
 			</tr>
 			</c:forEach>
 		</table>

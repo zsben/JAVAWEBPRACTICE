@@ -57,5 +57,7 @@
 			<br>
 			<button type="submit" class="mybtn">评分提交</button>
 		</form>
+		<br/>
+		<a href="${basePath}loadFile.jsp" class="mybtn" style="text-decoration: none">批量导入</a>
 	</body>
 </html>

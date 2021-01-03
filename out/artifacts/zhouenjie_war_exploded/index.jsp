@@ -34,7 +34,7 @@
 	</head>
 	<body>
 		<div class="header">
-			<div class="logo">学生选课系统</div>
+			<div class="logo">研究生成绩管理系统</div>
 			<div class="user">
 				<i class="fa fa-caret-down point"></i>
 				<i class="fa fa-user"></i>
@@ -97,7 +97,6 @@
 							及格率
 						</a>
 					</li>
-					
 				</ul>
 				</c:if>
 				<c:if test="${type ==1}">
